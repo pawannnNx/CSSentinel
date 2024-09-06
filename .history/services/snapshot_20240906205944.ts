@@ -15,7 +15,7 @@ export const  getSnapShots = async ()=>{
     return snapshot.docs.map(doc=> doc.data())
 }
 
-export const getSnapshotById =async (id:string)=>{
+export const getSnaphotBytId =async (id:string)=>{
     const snapshot= await db.collection('snapshots').doc(id).get();
     return snapshot.data()
 }
